@@ -61,3 +61,11 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.8'
 end
 gem 'faker', '~> 1.8', '>= 1.8.4'
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails-console'
+end
