@@ -1,0 +1,10 @@
+<% if notice %>
+    <%= content_tag :div, class: "alert alert-success my-1" do %>
+        <%= content_tag :div, notice, class: "container" %>
+    <% end %>
+<% end %>
+<% if alert %>
+    <%= content_tag :div, class: "alert alert-danger my-1" do %>
+        <%= content_tag :div, alert, class: "container" %>
+    <% end %>
+<% end %>

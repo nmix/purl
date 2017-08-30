@@ -70,3 +70,5 @@ group :development do
   gem 'capistrano-rails-console'
   gem 'capistrano-yarn'
 end
+
+gem 'active_link_to', '~> 1.0', '>= 1.0.5'

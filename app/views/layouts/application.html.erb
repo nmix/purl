@@ -11,7 +11,13 @@
   <body>
     <%= render 'layouts/nav' %>
     <div class="container-fluid" style="margin-top: 70px">
-      <%= yield %>
+      <%= render "/common/alert" %>
+      <div class="row">
+        <%= render 'layouts/side' %>
+        <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+          <%= yield %>
+        </main>
+      </div>
     </div>
   </body>
 </html>

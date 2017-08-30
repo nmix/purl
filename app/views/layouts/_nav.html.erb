@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Dashboard</a>
+  <%= link_to "Purl", root_path, class: "navbar-brand" %>
   <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
+    <!-- <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -18,10 +18,17 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Help</a>
       </li>
-    </ul>
-    <form class="form-inline mt-2 mt-md-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </ul> -->
+    <!-- <form class="form-inline mt-2 mt-md-0 ml-auto">
+      <input class="form-control mr-sm-2" type="text" placeholder="New Bucket" aria-label="Create">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Create</button>
+    </form> -->
+    <%= form_tag buckets_path, class: "form-inline mt-2 mt-md-0 ml-auto", method: "post" do %>
+      <%= text_field_tag "bucket[name]", nil, type: "text", class: "form-control mr-sm-2", placeholder: "New Bucket" %>
+      <%= submit_tag "Create bucket", class: "btn btn-outline-success my-2 my-sm-0" %>
+    <% end %>
+    <% if @bucket %>
+      <%= link_to "Remove Bucket", @bucket, method: :delete, class: "btn btn-outline-danger m-2 my-sm-0" %>
+    <% end %>
   </div>
 </nav>
