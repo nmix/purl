@@ -68,4 +68,5 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-passenger'
   gem 'capistrano-rails-console'
+  gem 'capistrano-yarn'
 end
