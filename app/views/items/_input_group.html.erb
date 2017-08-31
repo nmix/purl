@@ -1,0 +1,24 @@
+<div class="input-group input-group-sm">
+
+  <%= text_field_tag :file_url, item.file.url, 
+    id: "item_#{item.id}",
+    class: "form-control",
+    "aria-label" => "Text input",
+    readonly: true %>
+
+  <div class="input-group-btn">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      File
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+      <%= button_tag class: "clipboard-trigger dropdown-item", 
+        :data => { 
+          "clipboard-action" => "copy", 
+          "clipboard-target" => "#item_#{item.id}" } do %>
+        Copy Link
+      <% end %>
+      <div role="separator" class="dropdown-divider"></div>
+      <%= link_to "Delete File", item, method: :delete, class: "dropdown-item" %>
+    </div>
+  </div>
+</div>

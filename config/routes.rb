@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :buckets, only: [:create, :destroy] do
-    resources :items, only: :index
+    resources :items, only: [:index, :create, :destroy], shallow: true
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

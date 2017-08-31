@@ -1,6 +1,6 @@
 <%= form_tag buckets_path, class: "form-inline my-2", method: "post" do %>
   <div class="input-group">
-    <%= text_field_tag "bucket[name]", nil, type: "text", class: "form-control", placeholder: "New Bucket" %>
+    <%= text_field_tag "bucket[name]", nil, type: "text", class: "form-control", placeholder: "New Bucket", required: true %>
     <span class="input-group-btn">
       <%= submit_tag "Create", class: "btn btn-outline-primary" %>
     </span>
@@ -8,9 +8,12 @@
 <% end %>
 <ul class="nav nav-pills flex-column">
   <% if @buckets.any? %>
+    <span class="dark-gray">Buckets:</span>
     <% @buckets.each do |bucket| %>
       <li class="nav-item">
-        <%= active_link_to bucket.name, bucket_items_path(bucket), class: "nav-link" %>
+        <%= active_link_to bucket_items_path(bucket), class: "nav-link" do %>
+          <%= bucket.name %>
+        <% end %>
       </li>
     <% end %>
   <% else %>

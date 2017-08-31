@@ -4,10 +4,23 @@
   </nav>
   <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
     <div class="row">
-      <%= render 'items' %>
+      <div class="col">
+        <% if @items.any? %>
+          <%= render 'items' %>
+        <% else %>
+          <span class="dark-gray">No Files</span>
+        <% end %>
+      </div>
     </div>
+    <hr>
     <% if @bucket %>
-      <div class="row">
+      <div class="row p-2">
+
+        <%= form_for [@bucket, @item], class: "form-inline my-2" do |f| %>
+          <%= f.file_field :file, required: true %>
+          <%= f.submit "Upload", class: "btn btn-outline-success" %>
+        <% end %>
+
         <%= link_to "Remove Bucket", @bucket, method: :delete, class: "btn btn-outline-danger m-2 ml-auto" %>
       </div>
     <% end %>
