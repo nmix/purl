@@ -1,13 +1,10 @@
 Item.delete_all
 Bucket.delete_all
+User.delete_all
 
-[
-  "Корзина 1",
-  "Корзина 11",
-  "public",
-  "project info"
-].each{ |name| Bucket.create!(name: name) }
+User.create!(email: "user@example.com", password: "123123")
+3.times { User.create!(email: Faker::Internet.email(Faker::Name.last_name), password: "123123") }
 
-Bucket.find_each do |bucket|
-  5.times { bucket.items.create!(name: Faker::Lorem.sentence) }
+User.find_each do |user|
+  3.times{ user.buckets.create!(name: Faker::Lorem.word) }
 end

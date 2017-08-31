@@ -3,3 +3,19 @@
  *= require_tree .
  *= require_self
 */
+
+// --- background colors
+
+.bg-gray {
+  background-color: lightgray;
+}
+
+// --- foreground colors
+
+.gray {
+  color: lightgray;
+}
+
+.dark-gray {
+  color: gray;
+}

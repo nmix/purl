@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root 'dashboard#index'
+  root 'dashboard#landing'
   get 'dashboard/index'
+  
+  devise_for :users
 
   resources :buckets, only: [:create, :destroy] do
     resources :items, only: :index

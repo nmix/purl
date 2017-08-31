@@ -4,19 +4,18 @@ class BucketsController < ApplicationController
 
   # POST /buckets(.:format)
   def create
-    bucket = Bucket.new(bucket_params)
+    bucket = current_user.buckets.build(bucket_params)
     if bucket.save
-      flash[:notice] = "Bucket created successfuly"
+      redirect_to bucket_items_path(bucket), notice: "Bucket created successfuly"
     else
-      flash[:alert] = "Bucket creating error"
+      redirect_to dashboard_index_path, alert: "Bucket creating error"
     end
-    redirect_to root_path
   end
 
   # DELETE /buckets/:id(.:format)
   def destroy
     @bucket.destroy!
-    redirect_to root_path, notice: "Bucket destroyed successfuly"
+    redirect_to dashboard_index_path, notice: "Bucket destroyed successfuly"
   end
 
   private

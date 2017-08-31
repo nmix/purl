@@ -1,0 +1,19 @@
+<%= form_tag buckets_path, class: "form-inline my-2", method: "post" do %>
+  <div class="input-group">
+    <%= text_field_tag "bucket[name]", nil, type: "text", class: "form-control", placeholder: "New Bucket" %>
+    <span class="input-group-btn">
+      <%= submit_tag "Create", class: "btn btn-outline-primary" %>
+    </span>
+  </div>
+<% end %>
+<ul class="nav nav-pills flex-column">
+  <% if @buckets.any? %>
+    <% @buckets.each do |bucket| %>
+      <li class="nav-item">
+        <%= active_link_to bucket.name, bucket_items_path(bucket), class: "nav-link" %>
+      </li>
+    <% end %>
+  <% else %>
+    <span class="dark-gray">No buckets</span>
+  <% end %>
+</ul>

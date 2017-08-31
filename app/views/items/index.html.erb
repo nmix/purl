@@ -1,18 +1,15 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>Filename</th>
-      <th>Size</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <%= content_tag :td, item.name %>
-        <td></td>
-        <td></td>
-      </tr>
+<div class="row">
+  <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar mt-3">
+    <%= render 'common/side' %>
+  </nav>
+  <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+    <div class="row">
+      <%= render 'items' %>
+    </div>
+    <% if @bucket %>
+      <div class="row">
+        <%= link_to "Remove Bucket", @bucket, method: :delete, class: "btn btn-outline-danger m-2 ml-auto" %>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </main>
+</div>
