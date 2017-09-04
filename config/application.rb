@@ -18,5 +18,9 @@ module Purl
       g.javascript_engine :js
       g.test_framework :rspec
     end
+
+    config.paths['db/migrate'] = ['dbctl/migrate']
+    config.paths['db/seeds.rb'] = ['dbctl/seeds.rb']
   end
+
 end
