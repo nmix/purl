@@ -1,24 +1,30 @@
-# README
+# Purl
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Purl (Persistent Url) - primitive file hosting with web interface
 
-Things you may want to cover:
+## Running via Docker
 
-* Ruby version
+```bash
+docker pull zoidenberg/purl
+docker volume create purl-db
+docker volume create purl-files
+docker run --name purl --rm -d -p 8889:80 -v purl-db:/home/app/purl/db -v purl-files:/home/app/purl/public/files -e PURL_HOST=http://current-host-name purl
+```
 
-* System dependencies
+## Using
 
-* Configuration
+1) signin/signup on the service
 
-* Database creation
+2) create Bucket
 
-* Database initialization
+3) upload dile
 
-* How to run the test suite
+4) copy url
 
-* Services (job queues, cache servers, search engines, etc.)
+5) past it
 
-* Deployment instructions
+![Example Image](http://purl.zstaging.xyz/files/8d4b0ccf-5289-4dee-b807-9a0d7891e1f4.jpg)
 
-* ...
+## License
+
+This project rocks and uses MIT-LICENSE.
