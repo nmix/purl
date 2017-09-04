@@ -23,10 +23,10 @@ RUN bundle install --without development test --jobs 5
 
 COPY . .
 
-RUN bin/rails assets:precompile
-
 COPY config/secrets.yml.example config/secrets.yml
 COPY config/database.yml.example config/database.yml
+
+RUN bin/rails assets:precompile
 
 COPY config/nginx-server.conf /etc/nginx/sites-enabled/purl.conf
 COPY config/nginx-maind.conf /etc/nginx/main.d/purlenv.conf
