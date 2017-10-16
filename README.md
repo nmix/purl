@@ -17,7 +17,7 @@ docker run --name purl --rm -d -p 8889:80 -v purl-db:/home/app/purl/db -v purl-f
 
 2) create Bucket
 
-3) upload dile
+3) upload file
 
 4) copy url
 
