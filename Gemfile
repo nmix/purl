@@ -77,5 +77,6 @@ gem 'devise'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
 gem 'carrierwave', '~> 1.1'
 gem 'filesize', '~> 0.1.1'
+#  добавлены при работе 2018-02-18
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
