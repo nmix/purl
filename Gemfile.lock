@@ -286,7 +286,7 @@ DEPENDENCIES
   active_link_to (~> 1.0, >= 1.0.5)
   bootstrap (~> 4.0.0)
   byebug
-  capistrano
+  capistrano (~> 3.0)
   capistrano-passenger
   capistrano-rails
   capistrano-rails-console

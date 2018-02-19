@@ -64,7 +64,7 @@ end
 gem 'faker', '~> 1.8', '>= 1.8.4'
 
 group :development do
-  gem 'capistrano'
+  gem 'capistrano', '~> 3.0'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano-passenger'
