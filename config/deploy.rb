@@ -1,5 +1,5 @@
 set :application, 'purl'
-set :repo_url, 'git@github.cim:kulikovsa86/purl.git'
+set :repo_url, 'git@github.com:kulikovsa86/purl.git'
 
 set :deploy_to, '/home/deploy/purl'
 
