@@ -17,8 +17,7 @@
       <div class="row p-2">
 
         <%= form_for [@bucket, @item], class: "form-inline my-2" do |f| %>
-          <%= f.file_field :file, required: true %>
-          <%= f.submit "Upload", class: "btn btn-outline-success" %>
+          <%= f.file_field :file, required: true, :onchange => "$(this).parents('form').submit();" %>     
         <% end %>
 
         <%= link_to "Remove Bucket", @bucket, method: :delete, class: "btn btn-outline-danger m-2 ml-auto" %>
