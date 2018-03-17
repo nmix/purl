@@ -54,7 +54,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ---
-
 gem 'pry-rails', '~> 0.3.6'
 group :development, :test do
   gem 'rspec-rails', '~> 3.6', '>= 3.6.1'
