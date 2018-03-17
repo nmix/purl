@@ -59,7 +59,6 @@ gem 'pry-rails', '~> 0.3.6'
 group :development, :test do
   gem 'rspec-rails', '~> 3.6', '>= 3.6.1'
   gem 'factory_girl_rails', '~> 4.8'
-  gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 end
 gem 'faker', '~> 1.8', '>= 1.8.4'
 
@@ -77,3 +76,4 @@ gem 'devise'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
 gem 'carrierwave', '~> 1.1'
 gem 'filesize', '~> 0.1.1'
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'

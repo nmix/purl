@@ -29,3 +29,4 @@
 /public/uploads
 /public/files
 .env
+*.swp
