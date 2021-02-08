@@ -73,6 +73,6 @@ end
 gem 'active_link_to', '~> 1.0', '>= 1.0.5'
 gem 'devise'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
-gem 'carrierwave', '~> 1.1'
+gem 'carrierwave', '~> 1.3'
 gem 'filesize', '~> 0.1.1'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
